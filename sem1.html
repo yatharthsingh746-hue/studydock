@@ -4,25 +4,97 @@
   <title>Semester 1 - Resources</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+
+  <style>
+    /* Temporary style (optional) if not in style.css */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h2, h3 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 15px 0;
+      text-align: center;
+    }
+    a.download-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.download-btn:hover {
+      background-color: #0056b3;
+    }
+    span {
+      display: block;
+      margin-top: 5px;
+      color: #333;
+    }
+    .back-link {
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  <h2>Semester 1</h2>
-  
+  <h2>Previous Year Papers</h2>
+  <h3>Sessional 1</h3>
+
   <ul>
     <li>
-      <a href="papers/sem1/maths1.pdf" download onclick="countDownload('maths1')">
-        Maths 1 - Previous Year Paper
-      </a>
-      <span id="maths1-count">Downloads: 0</span>
-    </li>
-    <li>
-      <a href="papers/sem1/physics1.pdf" download onclick="countDownload('physics1')">
-        Physics 1 - Assignment
+      <a href="papers/sem1/physics1.pdf" class="download-btn" download onclick="countDownload('physics1')">
+        Engg. Physics
       </a>
       <span id="physics1-count">Downloads: 0</span>
     </li>
+
+    <li>
+      <a href="papers/sem1/maths1.pdf" class="download-btn" download onclick="countDownload('maths1')">
+        Mathematics 1
+      </a>
+      <span id="maths1-count">Downloads: 0</span>
+    </li>
+
+    <li>
+      <a href="papers/sem1/electrical1.pdf" class="download-btn" download onclick="countDownload('electrical1')">
+        Electrical
+      </a>
+      <span id="electrical1-count">Downloads: 0</span>
+    </li>
+
+    <li>
+      <a href="papers/sem1/environment1.pdf" class="download-btn" download onclick="countDownload('environment1')">
+        Environment and Ecology
+      </a>
+      <span id="environment1-count">Downloads: 0</span>
+    </li>
+
+    <li>
+      <a href="papers/sem1/pps1.pdf" class="download-btn" download onclick="countDownload('pps1')">
+        PPS
+      </a>
+      <span id="pps1-count">Downloads: 0</span>
+    </li>
   </ul>
-  
-  <a href="index.html">⬅ Back to Home</a>
+
+  <a href="index.html" class="back-link">⬅ Back to Home</a>
 </body>
 </html>
