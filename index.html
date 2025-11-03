@@ -11,33 +11,50 @@
 </head>
 <body>
 
-  <header>
-    <h1>Studydock</h1>
-    <p>Download previous year papers, assignments, and lab manuals.</p>
-    <!-- Navigation Bar -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Studydock</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#semesters">Semesters</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / Header Section -->
+  <header class="hero">
+    <h1>Welcome to Studydock</h1>
+    <p>Download previous year papers, assignments, and lab manuals easily.</p>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <div class="semester-links">
-      <a href="sem1.html">Semester 1</a>
-      <a href="sem2.html">Semester 2</a>
-      <a href="sem3.html">Semester 3</a>
-      <a href="sem4.html">Semester 4</a>
-      <a href="sem5.html">Semester 5</a>
-      <a href="sem6.html">Semester 6</a>
-    </div>
+
+    <!-- Semester Section -->
+    <section id="semesters" class="semester-section">
+      <h2>Choose Your Semester</h2>
+      <div class="semester-links">
+        <a href="sem1.html">Semester 1</a>
+        <a href="sem2.html">Semester 2</a>
+        <a href="sem3.html">Semester 3</a>
+        <a href="sem4.html">Semester 4</a>
+        <a href="sem5.html">Semester 5</a>
+        <a href="sem6.html">Semester 6</a>
+      </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="about-section">
       <h2>About Studydock</h2>
-      <p>Studydock is a resource hub for students to easily access previous year question papers, lab manuals, and assignments. Our goal is to make study materials organized and easily accessible for all semesters.</p>
+      <p>
+        Studydock is your one-stop academic hub. We aim to simplify study resources by providing 
+        well-organized access to previous year papers, lab manuals, and assignments for all semesters.
+      </p>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Studydock. All rights reserved.
   </footer>
