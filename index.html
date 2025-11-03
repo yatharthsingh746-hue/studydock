@@ -18,7 +18,7 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="semesters.html">Semesters</a></li>
-   </ul>
+    </ul>
   </nav>
 
   <!-- Hero / Header Section -->
@@ -30,16 +30,29 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Semester Section -->
-    <section id="semesters" class="semester-section">
-      <h2>Choose Your Semester</h2>
-      <div class="semester-links">
-        <a href="sem1.html">Semester 1</a>
-        <a href="sem2.html">Semester 2</a>
-        <a href="sem3.html">Semester 3</a>
-        <a href="sem4.html">Semester 4</a>
-        <a href="sem5.html">Semester 5</a>
-        <a href="sem6.html">Semester 6</a>
+    <!-- Buttons Section -->
+    <section class="home-buttons">
+      <h2>Resources</h2>
+      <div class="buttons-container">
+
+        <!-- Previous Year Papers Button -->
+        <div class="resource">
+          <button class="resource-btn" onclick="toggleSemesters()">Previous Year Papers</button>
+          <div id="semester-buttons" class="semester-buttons" style="display: none;">
+            <a href="sem1.html">Semester 1</a>
+            <a href="sem2.html">Semester 2</a>
+            <a href="sem3.html">Semester 3</a>
+            <a href="sem4.html">Semester 4</a>
+            <a href="sem5.html">Semester 5</a>
+            <a href="sem6.html">Semester 6</a>
+          </div>
+        </div>
+
+        <!-- Assignments Button -->
+        <div class="resource">
+          <a href="assignments.html" class="resource-btn">Assignments</a>
+        </div>
+
       </div>
     </section>
 
@@ -50,7 +63,17 @@
     &copy; 2025 Studydock. All rights reserved.
   </footer>
 
+  <!-- JS for toggling semester buttons -->
+  <script>
+    function toggleSemesters() {
+      const semDiv = document.getElementById("semester-buttons");
+      if (semDiv.style.display === "none") {
+        semDiv.style.display = "flex";
+      } else {
+        semDiv.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>
-
-
