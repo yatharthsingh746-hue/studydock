@@ -47,3 +47,19 @@ span {
 .back-link:hover {
   text-decoration: underline;
 }
+
+a.download-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a.download-btn:hover {
+  background-color: #0056b3;
+}
+
