@@ -1,73 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Semester 1 - Resources</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 1 | StudyDock</title>
 
-  <style>
-    /* Temporary style (optional) if not in style.css */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
-    }
-    h2, h3 {
-      text-align: center;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin: 15px 0;
-      text-align: center;
-    }
-    a.download-btn {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    a.download-btn:hover {
-      background-color: #0056b3;
-    }
-    span {
-      display: block;
-      margin-top: 5px;
-      color: #333;
-    }
-    .back-link {
-      display: block;
-      margin-top: 40px;
-      text-align: center;
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
 
-<body>
-  <h2>Previous Year Papers</h2>
-  <h3>Sessional 1</h3>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition">
 
- <ul>
-  <li><a href="papers/sem1/physics1.pdf" class="download-btn" download>Engg. Physics</a></li>
-  <li><a href="papers/sem1/maths1.pdf" class="download-btn" download>Mathematics 1</a></li>
-  <li><a href="papers/sem1/electrical1.pdf" class="download-btn" download>Electrical</a></li>
-  <li><a href="papers/sem1/environment1.pdf" class="download-btn" download>Environment and Ecology</a></li>
-  <li><a href="papers/sem1/pps1.pdf" class="download-btn" download>PPS</a></li>
-</ul>
+<!-- NAVBAR -->
+<nav class="bg-white dark:bg-gray-800 shadow sticky top-0">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">StudyDock</h1>
+    <div class="flex gap-4 items-center">
+      <a href="index.html">Home</a>
+      <a href="semesters.html">Semesters</a>
+      <button id="themeToggle" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+    </div>
+  </div>
+</nav>
 
-  <a href="index.html" class="back-link">⬅ Back to Home</a>
+<!-- CONTENT -->
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold mb-8 text-center">Semester 1 Papers</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Example PDF -->
+    <a href="papers/sem1/math1.pdf" target="_blank"
+       class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+      <h3 class="font-semibold text-lg">Engineering Mathematics-I</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Previous Year Paper</p>
+    </a>
+
+    <a href="papers/sem1/physics.pdf" target="_blank"
+       class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+      <h3 class="font-semibold text-lg">Engineering Physics</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Question Paper</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white dark:bg-gray-800 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
+  © 2025 StudyDock
+</footer>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const html = document.documentElement;
+  toggle.onclick = () => {
+    html.classList.toggle("dark");
+    toggle.textContent = html.classList.contains("dark") ? "☀️" : "🌙";
+  };
+</script>
+
 </body>
 </html>
-
-
