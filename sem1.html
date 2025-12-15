@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semester 1 | StudyDock</title>
+  <title>Semester 1 Papers | StudyDock</title>
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style> body { font-family: 'Inter', sans-serif; } </style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition">
 
 <!-- NAVBAR -->
-<nav class="bg-white dark:bg-gray-800 shadow sticky top-0">
+<nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow">
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
     <h1 class="text-xl font-bold text-blue-600">StudyDock</h1>
     <div class="flex gap-4 items-center">
@@ -28,21 +34,36 @@
 
 <!-- CONTENT -->
 <section class="max-w-7xl mx-auto px-4 py-16">
-  <h2 class="text-3xl font-bold mb-8 text-center">Semester 1 Papers</h2>
+  <h2 class="text-3xl font-bold text-center mb-10">Semester 1 – Question Papers</h2>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-    <!-- Example PDF -->
-    <a href="papers/sem1/math1.pdf" target="_blank"
+    <!-- Mathematics -->
+    <a href="papers/sem1/maths1.pdf" download
        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
-      <h3 class="font-semibold text-lg">Engineering Mathematics-I</h3>
+      <h3 class="text-lg font-semibold">Engineering Mathematics–I</h3>
       <p class="text-sm text-gray-600 dark:text-gray-300">Previous Year Paper</p>
     </a>
 
-    <a href="papers/sem1/physics.pdf" target="_blank"
+    <!-- Physics -->
+    <a href="papers/sem1/physics1.pdf" download
        class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
-      <h3 class="font-semibold text-lg">Engineering Physics</h3>
-      <p class="text-sm text-gray-600 dark:text-gray-300">Question Paper</p>
+      <h3 class="text-lg font-semibold">Engineering Physics</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Previous Year Paper</p>
+    </a>
+
+    <!-- Electrical -->
+    <a href="papers/sem1/electrical1.pdf" download
+       class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+      <h3 class="text-lg font-semibold">Basic Electrical Engineering</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Previous Year Paper</p>
+    </a>
+
+    <!-- Environment -->
+    <a href="papers/sem1/environment1.pdf" download
+       class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+      <h3 class="text-lg font-semibold">Environmental Studies</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Previous Year Paper</p>
     </a>
 
   </div>
@@ -50,12 +71,14 @@
 
 <!-- FOOTER -->
 <footer class="bg-white dark:bg-gray-800 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
-  © 2025 StudyDock
+  © 2025 StudyDock • Built by Yatharth Singh
 </footer>
 
+<!-- DARK MODE SCRIPT -->
 <script>
   const toggle = document.getElementById("themeToggle");
   const html = document.documentElement;
+
   toggle.onclick = () => {
     html.classList.toggle("dark");
     toggle.textContent = html.classList.contains("dark") ? "☀️" : "🌙";
