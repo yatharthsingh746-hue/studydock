@@ -1,80 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <title>Studydock</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyDock | B.Tech Papers & Notes</title>
+
+  <meta name="description" content="StudyDock – Download B.Tech semester papers, notes and study material easily.">
+
+  <!-- Tailwind + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Studydock</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="semesters.html">Semesters</a></li>
-    </ul>
-  </nav>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all">
 
-  <!-- Hero / Header Section -->
-  <header class="hero">
-    <h1>Welcome to Studydock</h1>
-    <p>Download previous year papers, assignments, and lab manuals easily.</p>
-  </header>
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">StudyDock</h1>
 
-  <!-- Main Content -->
-  <main>
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="semesters.html" class="hover:text-blue-500">Semesters</a>
+      <a href="about.html" class="hover:text-blue-500">About</a>
 
-    <!-- Buttons Section -->
-<section class="home-buttons">
-  <h2>Resources</h2>
-  <div class="buttons-container">
-
-    <!-- Previous Year Papers Button -->
-    <div class="resource-card">
-      <button class="resource-btn" onclick="toggleSemesters()">
-        Previous Year Papers
+      <!-- Toggle -->
+      <button id="themeToggle" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">
+        🌙
       </button>
-      <div id="semester-buttons" class="semester-buttons">
-    <button onclick="location.href='sem1.html'">Semester 1</button>
-    <button onclick="location.href='sem2.html'">Semester 2</button>
-    <button onclick="location.href='sem3.html'">Semester 3</button>
-    <button onclick="location.href='sem4.html'">Semester 4</button>
-    <button onclick="location.href='sem5.html'">Semester 5</button>
-    <button onclick="location.href='sem6.html'">Semester 6</button>
-</div>
+    </div>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-4 py-20 text-center">
+  <h2 class="text-4xl font-bold mb-4">
+    Your One-Stop Platform for <span class="text-blue-500">B.Tech Study Material</span>
+  </h2>
+  <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+    Download semester papers, notes, and important resources — all in one place.
+  </p>
+
+  <div class="flex justify-center gap-4">
+    <a href="semesters.html" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Browse Semesters
+    </a>
+    <a href="about.html" class="px-6 py-3 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+      About Project
+    </a>
+  </div>
+</section>
+
+<!-- SEMESTER CARDS -->
+<section class="max-w-7xl mx-auto px-4 pb-20">
+  <h3 class="text-2xl font-semibold mb-6 text-center">Available Semesters</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <a href="sem1.html" class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:scale-105 transition">
+      <h4 class="text-xl font-semibold mb-2">Semester 1</h4>
+      <p class="text-gray-600 dark:text-gray-300">Notes • Papers • PDFs</p>
+    </a>
+
+    <div class="p-6 bg-gray-200 dark:bg-gray-700 rounded-xl text-center opacity-70">
+      <h4 class="text-xl font-semibold">Coming Soon</h4>
     </div>
 
-    <!-- Assignments Button -->
-    <div class="resource-card">
-      <a href="assignments.html" class="resource-btn">Assignments</a>
+    <div class="p-6 bg-gray-200 dark:bg-gray-700 rounded-xl text-center opacity-70">
+      <h4 class="text-xl font-semibold">Coming Soon</h4>
     </div>
 
   </div>
 </section>
 
-  </main>
+<!-- FOOTER -->
+<footer class="bg-white dark:bg-gray-800 py-6">
+  <div class="text-center text-sm text-gray-600 dark:text-gray-400">
+    © 2025 StudyDock • Built by Yatharth Singh  
+    <br>
+    <a href="https://github.com/YatharthSingh25/studydock" class="text-blue-500">GitHub</a>
+  </div>
+</footer>
 
-  <!-- JS for toggling semester buttons -->
-  <script>
-    function toggleSemesters() {
-      const semDiv = document.getElementById("semester-buttons");
-      if (semDiv.style.display === "none") {
-        semDiv.style.display = "flex";
-      } else {
-        semDiv.style.display = "none";
-      }
-    }
-  </script>
+<!-- THEME SCRIPT -->
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const html = document.documentElement;
+
+  toggle.onclick = () => {
+    html.classList.toggle("dark");
+    toggle.textContent = html.classList.contains("dark") ? "☀️" : "🌙";
+  };
+</script>
 
 </body>
 </html>
-
-
-
